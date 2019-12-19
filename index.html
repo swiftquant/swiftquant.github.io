@@ -1,14 +1,20 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
-		<title>TradingView Charting Library demo</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
-		<!-- Fix for iOS Safari zooming bug -->
+<!-- Fix for iOS Safari zooming bug -->
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-		<script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+
+    		<script type="text/javascript" src="charting_library/charting_library.min.js"></script>
 		<script type="text/javascript" src="datafeeds/udf/dist/polyfills.js"></script>
 		<script type="text/javascript" src="datafeeds/udf/dist/bundle.js"></script>
 
@@ -47,10 +53,274 @@
 			window.addEventListener('DOMContentLoaded', initOnReady, false);
 		</script>
 
-	</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="dist/css/jumbotron.css">
+    <link rel="stylesheet" href="dist/css/product.css">
+    <title>Swift Quant</title>
+    <style type="text/css">
+    #tv_chart_container {
+    	padding:10px 0px;
+    	margin-left: -15px;
+    }
+    </style>
 
-	<body style="margin:0px;">
-		<div id="tv_chart_container"></div>
-	</body>
+  </head>
 
+<body>
+
+
+<div class="container">
+
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Swift Quant<i class="fa fa-fw fa-user"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Stock</a>
+          <a class="dropdown-item" href="#">Securities</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <div class="nav-scroller bg-white">
+  <nav class="nav nav-underline">
+    <a class="nav-link active" href="#">Dashboard</a>
+    <a class="nav-link" href="#">
+      Friends
+      <span class="badge badge-pill bg-light align-text-bottom">27</span>
+    </a>
+    <a class="nav-link" href="#">Explore</a>
+    <a class="nav-link" href="#">Suggestions</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+  </nav>
+</div>
+
+
+  <!--<header class="navbar navbar-dark fixed-top bg-dark bd-navbar">-->
+      <!--<nav class="container w-100">-->
+
+
+
+        <!--<a class="navbar-brand" href="/">-->
+          <!--Swift Quant-->
+        <!--</a>-->
+
+          <!--&lt;!&ndash;<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+          <!--&lt;!&ndash;</button>&ndash;&gt;-->
+
+
+      <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+        <!--<ul class="navbar-nav mr-auto">-->
+          <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+          <!--</li>-->
+          <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#">Link</a>-->
+          <!--</li>-->
+          <!--<li class="nav-item">-->
+            <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+          <!--</li>-->
+          <!--<li class="nav-item dropdown">-->
+            <!--<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>-->
+            <!--<div class="dropdown-menu" aria-labelledby="dropdown01">-->
+              <!--<a class="dropdown-item" href="#">Action</a>-->
+              <!--<a class="dropdown-item" href="#">Another action</a>-->
+              <!--<a class="dropdown-item" href="#">Something else here</a>-->
+            <!--</div>-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</nav>-->
+
+  <!--</header>-->
+
+
+
+</header>
+
+<!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark  mx-auto justify-content-between">-->
+  <!--<a class="navbar-brand" href="#">Swift Quant</a>-->
+
+  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
+
+  <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+    <!--<ul class="navbar-nav mr-auto">-->
+      <!--<li class="nav-item active">-->
+        <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" href="#">Link</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item dropdown">-->
+        <!--<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>-->
+        <!--<div class="dropdown-menu" aria-labelledby="dropdown01">-->
+          <!--<a class="dropdown-item" href="#">Action</a>-->
+          <!--<a class="dropdown-item" href="#">Another action</a>-->
+          <!--<a class="dropdown-item" href="#">Something else here</a>-->
+        <!--</div>-->
+      <!--</li>-->
+    <!--</ul>-->
+    <!--&lt;!&ndash;<form class="form-inline my-2 my-lg-0">&ndash;&gt;-->
+      <!--&lt;!&ndash;<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">&ndash;&gt;-->
+      <!--&lt;!&ndash;<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</form>&ndash;&gt;-->
+  <!--</div>-->
+<!--</nav>-->
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Swift Quant</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+    	<div class="col-md-12">
+    		<div id="tv_chart_container"></div>
+    	</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+            <div class="col-md-6">
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </div>
+  </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p>&copy; SwiftQuant 2019-{{ site.time | date: "%Y" }}</p>
+</footer>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js" ></script>
+
+
+
+  </body>
 </html>
+
