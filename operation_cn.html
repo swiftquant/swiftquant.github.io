@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">回到主页</a></li>
+          <li>操作模式</li>
+        </ol>
+        <h2>证券经纪及买卖</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        
+
+        <p>
+          
+          <h5>证券经纪 </h5><br>
+          在金信期盈证券(香港)有限公司，客户可享受全面的一站式金融服务解决方案。客户可以透过电话或电邮与公司的专业顾问联系以获取最新的策略，并安排其账户进行任何类型的交易。 
+        </p>
+        <br>
+        <p>
+          
+          <h5>证券买卖 </h5><br>
+          本公司提供安全的互联网交易平台，让客户可以在香港联合交易所进行各种投资产品的交易，包括股票、共同基金、认股权证、牛熊证、股票挂钩票据及交易所买卖基金。  
+        </p>
+        <br>
+
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/app.min.js"></script>
+  <script> 
+  var head = Handlebars.templates.head_cn;
+  document.getElementById('head').innerHTML = head();
+  var header = Handlebars.templates.header_cn;
+  document.getElementById('header').innerHTML = header({operation:true});
+  var footer = Handlebars.templates.footer_cn;
+  document.getElementById('footer').innerHTML = footer();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

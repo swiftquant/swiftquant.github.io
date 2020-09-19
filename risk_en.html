@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Back to Main</a></li>
+          <li>Operation</li>
+        </ol>
+        <h2>Risk and internal control</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          The company always abides by relevant laws and regulations. The company complies with all regulatory requirements applicable to its business activities and implements a strict internal control system to ensure the best interests of customers and the company. All employees must abide by and implement relevant laws, rules, codes and guidelines issued by the SFC from time to time. When performing their duties, employees should use keen judgment and strict ethical standards, and abide by relevant regulations governing business and internal policies and procedures established by the company. The company has established a risk management committee to manage risk control matters. The committee implements and maintains risk management control systems, such as market risk and operational risk management frameworks, policies, guidelines and procedures; regularly conducts pre- and post-transaction monitoring; regularly conducts risk assessments; conducts risk analysis and due diligence on new products/business activities Investigate; cooperate with different business departments to identify, evaluate and reduce risks; monitor risks and propose potential risks to the company and stakeholders. The Operation Management Committee reviews and implements policies and procedures related to compliance and risk control, and manages and maintains related operational workflows in accordance with the latest regulations.
+        </p>
+        <p>
+          All committees of the company must have at least one director to ensure good corporate governance and internal control. All employees of the company shall act with appropriate skills, caution and diligence when performing their duties. The company is committed to identifying and reducing any possible risks.
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/app.min.js"></script>
+  <script> 
+  var head = Handlebars.templates.head_en;
+  document.getElementById('head').innerHTML = head();
+  var header = Handlebars.templates.header_en;
+  document.getElementById('header').innerHTML = header({operation:true});
+  var footer = Handlebars.templates.footer_en;
+  document.getElementById('footer').innerHTML = footer();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

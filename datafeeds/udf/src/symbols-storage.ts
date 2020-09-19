@@ -1,6 +1,7 @@
 import {
 	LibrarySymbolInfo,
 	SearchSymbolResultItem,
+	ResolutionString,
 } from '../../../charting_library/datafeed-api';
 
 import {
@@ -38,7 +39,7 @@ interface ExchangeDataResponseSymbolData {
 
 	'force-session-rebuild'?: boolean;
 
-	'supported-resolutions'?: string[];
+	'supported-resolutions'?: ResolutionString[];
 	'intraday-multipliers'?: string[];
 
 	'has-intraday'?: boolean;
@@ -73,7 +74,7 @@ function extractField<Field extends keyof ExchangeDataResponseSymbolData>(data: 
 	const value: ExchangeDataResponse[keyof ExchangeDataResponseSymbolData] = data[field];
 
 	if (Array.isArray(value) && (!valueIsArray || Array.isArray(value[0]))) {
-		return value[arrayIndex];
+		return value[arrayIndex] as ExchangeDataResponseSymbolData[Field];
 	}
 
 	return value as ExchangeDataResponseSymbolData[Field];
@@ -85,16 +86,17 @@ export class SymbolsStorage {
 	private readonly _symbolsList: string[] = [];
 	private readonly _datafeedUrl: string;
 	private readonly _readyPromise: Promise<void>;
-	private readonly _datafeedSupportedResolutions: string[];
+	private readonly _datafeedSupportedResolutions: ResolutionString[];
 	private readonly _requester: Requester;
 
-	public constructor(datafeedUrl: string, datafeedSupportedResolutions: string[], requester: Requester) {
+	public constructor(datafeedUrl: string, datafeedSupportedResolutions: ResolutionString[], requester: Requester) {
 		this._datafeedUrl = datafeedUrl;
 		this._datafeedSupportedResolutions = datafeedSupportedResolutions;
 		this._requester = requester;
 		this._readyPromise = this._init();
 		this._readyPromise.catch((error: Error) => {
 			// seems it is impossible
+			// tslint:disable-next-line:no-console
 			console.error(`SymbolsStorage: Cannot init, error=${error.toString()}`);
 		});
 	}
@@ -253,6 +255,7 @@ export class SymbolsStorage {
 					has_weekly_and_monthly: extractField(data, 'has-weekly-and-monthly', symbolIndex),
 					has_empty_bars: extractField(data, 'has-empty-bars', symbolIndex),
 					volume_precision: definedValueOrDefault(extractField(data, 'volume-precision', symbolIndex), 0),
+					format: 'price',
 				};
 
 				this._symbolsInfo[ticker] = symbolInfo;

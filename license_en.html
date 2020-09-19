@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Back to Main</a></li>
+          <li>Operation </li>
+        </ol>
+        <h2>License</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          <h5>Securities and Futures Commission License (CE No.: BLF 248)- since May 2018</h5><br>
+          • The Type 1 business (dealing in securities)<br> 
+          • The Type 4 business (advising on securities)<br>
+          • The Type 9 business (asset management)<br>
+        </p>
+        <br>
+         <p>
+          <h5>Exchange Participant of the Stock Exchange of Hong Kong- since February 2019</h5><br>
+          • Exchange Participant (Participant ID: 02140)<br>
+          • Direct Clearing Participant (Participant ID: B02140)<br>
+        </p>
+        <br>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/app.min.js"></script>
+  <script> 
+  var head = Handlebars.templates.head_en;
+  document.getElementById('head').innerHTML = head();
+  var header = Handlebars.templates.header_en;
+  document.getElementById('header').innerHTML = header({operation:true});
+  var footer = Handlebars.templates.footer_en;
+  document.getElementById('footer').innerHTML = footer();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

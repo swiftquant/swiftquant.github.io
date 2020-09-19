@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Back to Main</a></li>
+          <li>Operation</li>
+        </ol>
+        <h2>Securities Brokerage and Trading</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          <h5>Account Executive</h5><br>
+          At JQ Securities (Hong Kong) Limited, customers can enjoy a comprehensive one-stop financial service solution. Customers can contact the company's professional consultants by phone or email to obtain the latest strategies and arrange their accounts for transaction.
+        </p>
+        <br>
+        <p>
+          <h5>Securities trading</h5><br>
+          The company provides a secure Internet trading platform that allows customers to trade various investment products on the Hong Kong Stock Exchange, including stocks, mutual funds, warrants, CBBCs, stock-linked notes and exchange-traded funds. 
+        </p>
+        <br>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/app.min.js"></script>
+  <script> 
+  var head = Handlebars.templates.head_en;
+  document.getElementById('head').innerHTML = head();
+  var header = Handlebars.templates.header_en;
+  document.getElementById('header').innerHTML = header({operation:true});
+  var footer = Handlebars.templates.footer_en;
+  document.getElementById('footer').innerHTML = footer();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

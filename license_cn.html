@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">回到主页</a></li>
+          <li>操作模式</li>
+        </ol>
+        <h2>牌照</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          <h5>证监会牌照 (中央编号: BLF 248) – 自2018 年5 月生效</h5><br>
+          • 第一类（证券交易）<br> 
+          • 第四类（就证券提供意见） <br>
+          • 第九类（资产管理） <br>
+        </p>
+        <br>
+         <p>
+          <h5>香港联合交易所参与者 – 自2019 年2 月生效 </h5><br>
+          • 交易所参与者（参与者代号：02140） <br>
+          • 直接结算参与者（参与者代号：B02140） <br>
+        </p>
+        <br>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/app.min.js"></script>
+  <script> 
+  var head = Handlebars.templates.head_cn;
+  document.getElementById('head').innerHTML = head();
+  var header = Handlebars.templates.header_cn;
+  document.getElementById('header').innerHTML = header({operation:true});
+  var footer = Handlebars.templates.footer_cn;
+  document.getElementById('footer').innerHTML = footer();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
